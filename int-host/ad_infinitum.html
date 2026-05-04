@@ -1,0 +1,163 @@
+<html>
+	<head>
+		<title>...</title>
+		<style>
+			html, body {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+			}
+			
+			#black-screen {
+    				position: fixed;
+    				top: 0;
+    				left: 0;
+    				width: 100%;
+    				height: 100%;
+    				background: black;
+    				color: white;
+    				display: flex;
+    				align-items: center;
+    				justify-content: center;
+    				font-family: sans-serif;
+    				font-size: 1.5rem;
+    				z-index: 9999;
+    				cursor: pointer;
+				opacity: 1;
+				transition: opacity 3s ease;
+  			}
+
+			#black-screen.fade-out {
+				opacity: 0;
+				pointer-events: none;
+			}
+			
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: black;
+			}
+
+			.cent1 {
+				width: 50%;
+				margin: 50px auto;
+				text-align: center;
+				font-family: "Times New Roman";
+				font-size: 1.2rem;
+      				line-height: 1.6;
+      				word-wrap: break-word;
+				color: white;
+			}
+
+			.text-container {
+				width: 50%;
+				margin: 50px auto;
+				display: flex;
+  				flex-direction: column;
+  				align-items: center;
+  				justify-content: center;
+  				text-align: left;
+				font-family: "Times New Roman";
+				font-size: 120%;
+				line-height: 1.6;
+				word-wrap: break-word;
+			}
+
+			.line {
+      				opacity: 0.1;
+      				transform: translateY(4444px);
+      				animation: fadeInUp 8.88s forwards;
+				color: white;
+    			}
+
+			@keyframes fadeInUp {
+      				to {
+        				opacity: 1;
+        				transform: translateY(0);
+      				}
+    			}
+
+			@media (max-width: 768px) {
+      				.cent {
+        				width: 90%;
+        				font-size: 1rem;
+      				}
+    			}
+		</style>
+	</head>
+	<body>	
+		<div id="black-screen">
+  			<p>Click to enter</p>
+		</div>
+
+		<audio id="bg-audio" loop>
+			<source src="too-late.ogg" type="audio/ogg">
+		</audio>
+		
+		
+		<div class="text-container">
+			<div id="text-block">
+				<p class="line">There was something here. But it had deteriorated.</p>
+
+				<p class="line">One day, there will be another chance.</p>
+
+				<p class="line">One day...</p>
+
+				<p class="line">I'll miss you once I depart.</p>
+			</div>
+		</div>
+		<script>
+  			const blackScreen = document.getElementById("black-screen");
+  			const audio = document.getElementById("bg-audio");
+			const replaceButton = document.getElementById("replace-btn");
+			const textBlock = document.getElementById("text-block");
+			const lines = document.querySelectorAll(".line");
+			
+
+  			blackScreen.addEventListener("click", () => {
+    				blackScreen.classList.add("fade-out");
+
+				audio.volume = 0.3;
+    				audio.play();
+
+				lines.forEach((line, i) => {
+					line.style.animation = `fadeInUp 6s forwards`;
+					line.style.animationDelay = `${i * 4}s`;
+				});
+				
+				setTimeout(() => {
+					blackScreen.remove();
+				}, 2600);
+			});
+
+			if (replaceButton) {
+				console.log("button available");
+			}
+			
+			replaceButton.addEventListener("click", () => {
+				console.log("button clicked");
+
+				setTimeout(() => {
+					console.log("replacing text");
+					textBlock.innerHTML = `
+						<p class="line">There was text here. It's gone now.</p>
+						<p class="line"></p>
+					`;
+
+					const newLines = document.querySelectorAll(".line");
+					newLines.forEach((line, i) => {
+						line.style.opacity = "0";
+						line.style.transform = "translateY(4444px)";
+						line.style.animation = `fadeInUp 6s forwards`;
+						line.style.animationDelay = `${i * 4}s`;
+					});
+
+					replaceButton.style.display = "none";
+				}, 3000);
+			});
+		</script>
+		
+	</body>
+</html>
