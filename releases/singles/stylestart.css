@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.ft-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.footer a {
+    transition: color 1s;
+    color: #42bbff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #101d1f;
+}

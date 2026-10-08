@@ -10,7 +10,7 @@
           let direction = 1;
           
           setInterval(() => {
-            document.title = bchar.repeat(position) + "|";
+            document.title = bchar.repeat(position) + "streaming";
             position += direction;
             if (position === tabwidth || position === 0) {
               direction *= -1;
@@ -21,7 +21,27 @@
 
 <body>
   <main>
-    at the end of my day, the exhibit will be here to stay.
+    <h1>streaming</h1>
+    <a style="text-decoration:none;color: #1dd05d;" href="https://open.spotify.com/artist/4dG29mJ16eoKRfN40tI0wW">
+      spotify
+    </a>
+    <br>
+    <a style="text-decoration:none;color: #f75200;" href="https://soundcloud.com/ulica1">
+      soundcloud
+    </a>
+    <br>
+    <a style="text-decoration:none;color: #4694a7;" href="https://ulica1.bandcamp.com/">
+      bandcamp
+    </a>
+    <br>
+    <a style="text-decoration:none;color: #f60001;" href="https://www.youtube.com/@ntxnxp">
+      youtube
+    </a>
+    <br>
+    <br>
+    <a style="text-decoration:none;color: #42bbff;" href="index.html">
+      return
+    </a>
   </main>
 
   <footer class="footer">
@@ -31,7 +51,7 @@
     <div class="ft-links">
       <a href="about.html">about</a>
       <a href="releases.html">releases</a>
-      <a href="streaming.html">streaming</a>
+      <a style="color: #aaaaaa;" href="streaming.html">streaming</a>
       <a href="links.html">links</a>
       <a href="mailto:ulica1official@gmail.com">contact</a>
     </div>

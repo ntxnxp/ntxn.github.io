@@ -1,0 +1,77 @@
+<html lang="en">
+    <head>
+        <title>####################</title>
+        <link rel="stylesheet" href="stylestart.css">
+        <script>
+          const bchar = "\u2800";
+          const tabwidth = 20;
+          const speed = 50;
+          let position = 0;
+          let direction = 1;
+          
+          setInterval(() => {
+            document.title = bchar.repeat(position) + "releases";
+            position += direction;
+            if (position === tabwidth || position === 0) {
+              direction *= -1;
+            }
+          }, speed);
+        </script>
+    </head>
+
+<body>
+  <main>
+    <h1>first glow first serve</h1>
+    
+    <br>
+    <br>
+    <a href="https://distribute.avid.com/share/MTAwMDAwODk2Mjg0"><img width="50%" src="firstglowfirstserve.webp"></a>
+    <br>
+    <br>
+    <a style="text-decoration:none;color: #1dd05d;" href="https://open.spotify.com/album/4G7WrRxvGEGs2nM1Z6Wt72">
+      spotify
+    </a>
+    |
+    <a style="text-decoration:none;color: #f75200;" href="https://soundcloud.com/ulica1/first-glow-first-serve">
+      soundcloud
+    </a>
+    |
+    <a style="text-decoration:none;color: #4694a7;" href="https://ulica1.bandcamp.com/track/first-glow-first-serve">
+      bandcamp
+    </a>
+    |
+    <a style="text-decoration:none;color: #f12139;" href="https://music.apple.com/us/album/first-glow-first-serve-single/6818674496">
+      apple music
+    </a>
+    |
+    <a style="text-decoration:none;color: #000000;" href="https://tidal.com/album/566760705">
+      tidal
+    </a>
+    <br>
+    <br>
+    <!-- <h2 style="text-align: right;">credits</h2> -->
+    <div style="text-align: right;">
+      written by : ulica<br>
+      produced by : ulica<br>
+      mix / master by : ulica<br>
+      additional production by : <a style="text-decoration:none;color: #000000;" href="https://soundcloud.com/mydreamform">dreamform</a><br>
+    </div>
+    <br>
+    <a style="text-decoration:none;color: #42bbff;" href="../../releases.html">
+      return
+    </a>
+  </main>
+
+  <footer class="footer">
+    <div style="font-size: 50%;color: #aaaaaa;">
+      © 2026 ulica
+    </div>
+    <div class="ft-links">
+      <a href="about.html">about</a>
+      <a style="color: #aaaaaa;" href="releases.html">releases</a>
+      <a href="streaming.html">streaming</a>
+      <a href="links.html">links</a>
+      <a href="mailto:ulica1official@gmail.com">contact</a>
+    </div>
+  </footer>
+</body>

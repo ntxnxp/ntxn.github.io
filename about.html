@@ -1,0 +1,55 @@
+<html lang="en">
+    <head>
+        <title>####################</title>
+        <link rel="stylesheet" href="stylestart.css">
+        <script>
+          const bchar = "\u2800";
+          const tabwidth = 20;
+          const speed = 50;
+          let position = 0;
+          let direction = 1;
+          
+          setInterval(() => {
+            document.title = bchar.repeat(position) + "about";
+            position += direction;
+            if (position === tabwidth || position === 0) {
+              direction *= -1;
+            }
+          }, speed);
+        </script>
+    </head>
+
+<body>
+  <main>
+    <h1>about</h1>
+    <div style="text-align: left;">
+      ulica (formerly known as ntxn) is a polish experimental musician who currently resides in the uk.<br>
+      <br>
+      their music ranges from various electronic genres such as dubstep, ambient, hyperpop, and so on.
+      since 2019, they have been producing music until branding as ulica in 2026, and is expected to release their debut album sometime soon.<br>
+      <br>
+      in the meantime, ulica's <a style="text-decoration:none;color: #f75200;" href="https://soundcloud.com/ulica1" target="_blank" rel="noopener noreferrer">soundcloud</a> page features much more tracks compared to ones released on streaming services, and is highly suggested to look at from time to time for any new music which will be published there first.<br>
+      <br>
+    </div>
+    <div style="font-size: 66%;color:#aaaaaa;">
+      <b>for any inquiries, please reach out at <a style="text-decoration: none;color:#7777ed;" href="mailto:ulica1official@gmail.com">ulica1official@gmail.com</a></b>
+    </div>
+    <br>
+    <a style="text-decoration:none;color: #42bbff;" href="index.html">
+      return
+    </a>
+  </main>
+
+  <footer class="footer">
+    <div style="font-size: 50%;color: #aaaaaa;">
+      © 2026 ulica
+    </div>
+    <div class="ft-links">
+      <a style="color: #aaaaaa;" href="about.html">about</a>
+      <a href="releases.html">releases</a>
+      <a href="streaming.html">streaming</a>
+      <a href="links.html">links</a>
+      <a href="mailto:ulica1official@gmail.com">contact</a>
+    </div>
+  </footer>
+</body>

@@ -10,7 +10,7 @@
           let direction = 1;
           
           setInterval(() => {
-            document.title = bchar.repeat(position) + "|";
+            document.title = bchar.repeat(position) + "releases";
             position += direction;
             if (position === tabwidth || position === 0) {
               direction *= -1;
@@ -21,7 +21,18 @@
 
 <body>
   <main>
-    at the end of my day, the exhibit will be here to stay.
+    <h1>releases</h1>
+    <h2 style="text-align: left;">singles</h2>
+    first glow first serve
+    <br>
+    <br>
+    <a href="releases/singles/firstglowfirstserve.html"><img width="50%" src="img/releases/singles/firstglowfirstserve.webp"></a>
+    <br>
+    <br>
+    <br>
+    <a style="text-decoration:none;color: #42bbff;" href="index.html">
+      return
+    </a>
   </main>
 
   <footer class="footer">
@@ -30,7 +41,7 @@
     </div>
     <div class="ft-links">
       <a href="about.html">about</a>
-      <a href="releases.html">releases</a>
+      <a style="color: #aaaaaa;" href="releases.html">releases</a>
       <a href="streaming.html">streaming</a>
       <a href="links.html">links</a>
       <a href="mailto:ulica1official@gmail.com">contact</a>
